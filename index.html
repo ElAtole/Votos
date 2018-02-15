@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Personalice la directiva de seguridad de contenido en la etiqueta meta como sea necesario. Agregue "unsafe-inline" a default-src para permitir JavaScript insertado.
+        Para obtener más detalles, consulte http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery.validate.js"></script>
+    <script src="scripts/bootbox.min.js"></script>
+    <!--graficas-->
+
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/raphael-min.js"></script>
+    <link href="css/morris.css" rel="stylesheet" />
+    <script src="scripts/morris.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--graficas-->
+
+    <title>VotosUT</title>
+
+</head>
+<body>
+    <div class="iniciar">
+        <input id="entrar" type="button" value="LogIn" />
+    </div>
+    <div id="Logo" class="logout">
+        <div class="dentro">
+            <img src="images/UT-Tamaulipas-Norte.png" style="width:150px; height:120px;" />
+        </div>
+    </div>
+    <form id="form1">
+        <div class="imagen">
+            <div class="dentro">
+                <img src="images/tic.png" />
+            </div>
+            <h4>Tecnologias de la informacion y comunicacion</h4>
+            <div class="menu">
+                <label for="TIC1">sistemas</label><input id="TIC1" name="Selectionado" type="radio" value="sistemas" />
+                <label for="TIC2">redes</label><input id="TIC2" name="Selectionado" type="radio" value="redes" />
+                <label for="TIC3">multimedia</label><input id="TIC3" name="Selectionado" type="radio" value="multimedia" />
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="dentro">
+                <img src="images/meca.png" />
+            </div>
+            <h4>Mecatronica</h4>
+            <div class="menu">
+                <label for="Mecatronica1">Manufactura Flexible</label><input id="Mecatronica1" name="Selectionado" type="radio" value="manufacturaFlex" />
+                <label for="Mecatronica2">Automatizacion instalaciones</label><input id="Mecatronica2" name="Selectionado" type="radio" value="automatizacion" />
+                <label for="Mecatronica3">Instalaciones Electricas</label><input id="Mecatronica3" name="Selectionado" type="radio" value="instalaciones" />
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="dentro">
+                <img src="images/mant.png" />
+            </div>
+            <h4>Mantenimiento</h4>
+            <div class="menu">
+                <label for="Mantenimiento1">Soldadura</label><input id="Mantenimiento1" name="Selectionado" type="radio" value="soldadura" />
+                <label for="Mantenimiento2">Mantenimiento Industrial</label><input id="Mantenimiento2" name="Selectionado" type="radio" value="mantenimientoIndustrial" />
+                <label for="Mantenimiento3">Refrigeracion</label><input id="Mantenimiento3" name="Selectionado" type="radio" value="refrigeracion" />
+                <label for="Mantenimiento4">Maquina Pesada</label><input id="Mantenimiento4" name="Selectionado" type="radio" value="maquinaPesada" />
+                <label for="Mantenimiento5">Petroleos</label><input id="Mantenimiento5" name="Selectionado" type="radio" value="petroleos" />
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="dentro">
+                <img src="images/admin.png" />
+            </div>
+            <h4>Administracion</h4>
+            <div class="menu">
+                <label for="Administracion1">Formulacion y evaluacion de proyectos</label><input id="Administracion1" name="Selectionado" type="radio" value="formulacion" />
+                <label for="Administracion2">Capital Humano</label><input id="Administracion2" name="Selectionado" type="radio" value="capital" />
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="dentro">
+                <img src="images/energ.png" />
+            </div>
+            <h4>Energias Renovables</h4>
+            <div class="menu">
+                <label for="Energias">Calidad y ahorro de energia</label><input id="Energias" name="Selectionado" type="radio" value="ahorro" />
+
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="dentro">
+                <img src="images/proces.png" />
+            </div>
+            <h4>Procesos</h4>
+            <div class="menu">
+                <label for="Procesos1">Manufactura</label><input id="Procesos1" name="Selectionado" type="radio" value="manufactura" />
+                <label for="Procesos2">Plasticos</label><input id="Procesos2" name="Selectionado" type="radio" value="plasticos" />
+            </div>
+        </div>
+    </form>
+
+    <!--modal-->
+    <div class="modal fade" id="miventana" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Administrador</h4>
+                </div>
+                <div class="modal-body" id="divLista">
+                    <h5 id="msj">Gracias por votar!</h5>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" id="cerrarModal" class="btn-primary" data-dismiss="modal" value="Cerrar" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal-->
+    <input id="correo" type="text" />
+    <input id="btnVotar" type="button" value="Votar" data-toggle="modal" data-target="#miventana" />
+
+    <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>
